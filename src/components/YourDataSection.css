@@ -1,0 +1,152 @@
+.your-data-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.your-data-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.your-data-left,
+.your-data-right {
+  flex: 1 1 48%;
+}
+
+.half-circle-image {
+  width: 120%;
+  max-width: 590px;
+  display: block;
+  animation: float-in 1.5s ease forwards;
+  opacity: 0;
+}
+
+.your-data-heading {
+  font-size: 4.5rem;
+  color: #000;
+  margin-bottom: 0px;
+  position: relative;
+  display: inline-block;
+}
+
+.underline-wrap {
+  display: inline-block;
+  position: relative;
+}
+
+.heading-underline5 {
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+ 
+}
+
+
+.your-data-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+ 
+}
+
+.read-more-btn {
+  background-color: #4F9CF9;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.read-more-btn:hover {
+  background-color: #3687e2;
+}
+
+/*  animation keyframes */
+@keyframes float-in {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.reverse-layout {
+  flex-direction: row-reverse;
+}
+
+/* === Responsive (max-width: 1152px) === */
+@media (max-width: 1152px) {
+  .your-data-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .your-data-left,
+  .your-data-right {
+    flex: 1 1 100%;
+  }
+
+  .half-circle-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* === Responsive (max-width: 768px) === */
+@media (max-width: 768px) {
+  .your-data-heading {
+    font-size: 2.3rem;
+  }
+  .your-data-description {
+    font-size: 1rem;
+  }
+  .read-more-btn {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+  .half-circle-image {
+    max-width: 50px;
+  }
+}
+
+/* === Responsive (max-width: 425px) === */
+@media (max-width: 425px) {
+  .your-data-heading {
+    font-size: 2.0rem;
+  }
+  .half-circle-image {
+    max-width: 200px;
+ 
+  }
+  .your-data-description {
+    font-size: 0.9rem;
+  }
+  .read-more-btn {
+    width: 20%;
+    justify-content: center;
+  }
+}
+
+

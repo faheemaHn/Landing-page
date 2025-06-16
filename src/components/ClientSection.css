@@ -1,0 +1,166 @@
+.client-section {
+  padding: 60px 40px;
+  background-color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.client-heading {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #212529;
+  position: relative;
+  display: inline-block;
+}
+
+.underline-text {
+  position: relative;
+}
+
+.underline-img {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  pointer-events: none;
+}
+
+/* Scrollable container */
+.client-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 30px;
+  margin-top: 60px;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+.client-cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fixed width for each card */
+.client-card {
+  flex: 0 0 320px;
+  height: 350px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.client-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.quote-icon {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.client-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Divider – blue for white card, white for blue cards */
+.divider {
+  border: none;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.divider.blue {
+  background-color: #4F9CF9;
+}
+
+.divider.white {
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.client-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.client-position {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.8;
+}
+/* Media query*/
+@media (max-width: 1024px) {
+  .client-heading {
+    font-size: 2.8rem;
+  }
+
+  .client-cards {
+    gap: 20px;
+  }
+
+  .client-card {
+    flex: 0 0 280px;
+    height: 320px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-heading {
+    font-size: 2.2rem;
+  }
+
+  .client-card {
+    flex: 0 0 250px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .avatar-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .client-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .client-heading {
+    font-size: 1.8rem;
+  }
+
+  .underline-img {
+    width: 70px;
+  }
+
+  .client-card {
+    flex: 0 0 220px;
+    padding: 16px;
+  }
+
+  .client-text {
+    font-size: 0.9rem;
+  }
+}

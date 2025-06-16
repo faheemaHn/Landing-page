@@ -1,0 +1,164 @@
+.plan-section{
+    text-align: center;
+    padding: 80px 20px;
+    background-color:  white;
+}
+.plan-heading {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  color: #212529;
+}
+
+.underline-heading3 {
+  position: relative;
+  display: inline-block;
+}
+
+.heading-underline {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 200%;
+  height: auto;
+  pointer-events: none;
+}
+
+.plan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  border: 2px solid #FFE492;
+  border-radius: 12px;
+  padding: 30px 20px;
+  max-width: 320px;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.personal {
+  background-color: #043873;
+  color: #fff;
+  transform: scale(2.08); /* Enlarged only this card */
+  z-index: 2;
+  padding: 40px 25px;
+  border: 3px solid #043873;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Price color only for personal card */
+.plan-card.personal .plan-price {
+  color: #FFE492;
+}
+
+/* Bullet icon color only for personal card */
+.plan-card.personal .check-icon {
+  color: #000000;
+  background-color: #FFE492;
+}
+.plan-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.plan-price {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.plan-features {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.plan-features li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.check-icon {
+  background-color: #f0f0f0;
+  color: #000000;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 4px;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-started-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #FFE492;
+  transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+  opacity: 0.9;
+}
+
+.get-started-btn.personal {
+  background-color: #4F9CF9;
+  color: #fff;
+  border: none;
+}
+
+.get-started-btn.free,
+.get-started-btn.organization {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Media query fo different size devices*/
+
+@media (max-width: 768px) {
+  .plan-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card.personal {
+    transform: scale(1);
+  }
+
+  .plan-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .plan-card {
+    padding: 20px 15px;
+  }
+
+  .plan-heading {
+    font-size: 2rem;
+  }
+
+  .plan-price {
+    font-size: 32px;
+  }
+
+  .plan-title {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,126 @@
+.project-section {
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 100px 20px 70px;
+
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.left-content {
+  flex: 1 1 50%;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 40px;
+}
+
+.heading {
+  color: #212529;
+  font-size: 4.8rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block; /* Needed to fit underline */
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.heading-underline1 {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 200%; /* Make it stretch */
+  max-width: 570px;
+  height: auto;
+  z-index: -1;
+}
+
+.project-description {
+  color: #212529;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.get-started-btn {
+  background-color: #4F9CF9;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #212529;
+}
+
+.right-content {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  .left-content,
+  .right-content {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .heading-underline1 {
+    width: 50%;
+    max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .project-description {
+    font-size: 1rem;
+    max-width: 50%;
+    margin: 0 auto 10px;
+  }
+
+  .get-started-btn {
+    width: 50%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .right-video {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+}
